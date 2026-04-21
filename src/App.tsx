@@ -1,15 +1,15 @@
 import { useMemo, useState } from "react";
 import philosophies from "./data/philosophies.json";
-import type { Lang, Philosophy, Scene, SchoolKey } from "./types";
+import type { Philosophy, Scene, SchoolKey } from "./types";
 import { PhilosophyCard } from "./components/PhilosophyCard";
 import { DemoStrip } from "./components/DemoStrip";
 
-const SCHOOLS: { key: SchoolKey; zh: string; en: string; blurb_en: string }[] = [
-  { key: "information", zh: "信息建筑派", en: "Information Architecture", blurb_en: "Data is not decoration — it's building material." },
-  { key: "motion", zh: "运动诗学派", en: "Motion Poetics", blurb_en: "Scroll, play, perform — the browser as stage." },
-  { key: "minimalism", zh: "极简主义派", en: "Minimalism", blurb_en: "Radical restraint — type and grid as identity." },
-  { key: "experimental", zh: "实验先锋派", en: "Experimental Avant-garde", blurb_en: "Code as medium, generative systems as voice." },
-  { key: "eastern", zh: "东方哲学派", en: "Eastern Philosophy", blurb_en: "Emptiness, ink, rhythm — restraint with depth." },
+const SCHOOLS: { key: SchoolKey; en: string; blurb_en: string }[] = [
+  { key: "information", en: "Information Architecture", blurb_en: "Data is not decoration — it's building material." },
+  { key: "motion", en: "Motion Poetics", blurb_en: "Scroll, play, perform — the browser as stage." },
+  { key: "minimalism", en: "Minimalism", blurb_en: "Radical restraint — type and grid as identity." },
+  { key: "experimental", en: "Experimental Avant-garde", blurb_en: "Code as medium, generative systems as voice." },
+  { key: "eastern", en: "Eastern Philosophy", blurb_en: "Emptiness, ink, rhythm — restraint with depth." },
 ];
 
 const SCENES: { key: Scene; label: string }[] = [
@@ -21,7 +21,6 @@ const SCENES: { key: Scene; label: string }[] = [
 ];
 
 export default function App() {
-  const [lang, setLang] = useState<Lang>("both");
   const [sceneFilter, setSceneFilter] = useState<Scene | null>(null);
   const [pathFilter, setPathFilter] = useState<string | null>(null);
 
@@ -53,23 +52,10 @@ export default function App() {
           <p className="mt-6 max-w-2xl text-[color:var(--ink-dim)] text-[15px] leading-relaxed">
             A browsable gallery of the design philosophies shipped in{" "}
             <a href="https://github.com/alchaincyf/huashu-design" className="text-[color:var(--accent)] underline decoration-1 underline-offset-2" target="_blank" rel="noreferrer">alchaincyf/huashu-design</a>{" "}
-            (⭐ 2,699). Click any card's <span className="mono">copy prompt DNA</span> button to paste a ready-made style prompt straight into Claude Code, Cursor, or OpenClaw. Bilingual captions, five schools, twenty philosophies.
+            (⭐ 2,699). Click any card's <span className="mono">copy prompt DNA</span> button to paste a ready-made style prompt straight into Claude Code, Cursor, or OpenClaw. Five schools, twenty philosophies.
           </p>
 
           <div className="mt-8 flex flex-wrap gap-x-6 gap-y-3 items-center text-[12px]">
-            <div className="flex items-center gap-2">
-              <span className="mono uppercase text-[color:var(--ink-faint)] tracking-widest">Lang</span>
-              {(["cn", "en", "both"] as Lang[]).map((l) => (
-                <button
-                  key={l}
-                  onClick={() => setLang(l)}
-                  className={`mono uppercase tracking-widest px-2 py-1 border ${lang === l ? "border-[color:var(--accent)] text-[color:var(--accent)]" : "border-[color:var(--rule)] text-[color:var(--ink-dim)] hover:border-[color:var(--accent-dim)]"}`}
-                >
-                  {l}
-                </button>
-              ))}
-            </div>
-
             <div className="flex items-center gap-2 flex-wrap">
               <span className="mono uppercase text-[color:var(--ink-faint)] tracking-widest">Best for</span>
               {SCENES.map((s) => (
@@ -113,7 +99,6 @@ export default function App() {
                 <div className="mono text-[10px] tracking-[0.3em] text-[color:var(--accent)] uppercase">{roman}</div>
                 <div>
                   <h2 className="text-3xl">{school.en}</h2>
-                  <div className="text-cn text-[14px] text-[color:var(--ink-dim)] mt-1">{school.zh}</div>
                 </div>
                 <div className="ml-auto text-[12px] text-[color:var(--ink-faint)] italic hidden md:block max-w-sm text-right" style={{ fontFamily: "var(--serif)" }}>
                   {school.blurb_en}
@@ -121,7 +106,7 @@ export default function App() {
               </div>
               <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-4 gap-6">
                 {items.map((p) => (
-                  <PhilosophyCard key={p.number} philosophy={p} lang={lang} />
+                  <PhilosophyCard key={p.number} philosophy={p} />
                 ))}
               </div>
             </section>

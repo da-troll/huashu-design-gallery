@@ -1,4 +1,4 @@
-import type { Philosophy, Lang } from "../types";
+import type { Philosophy } from "../types";
 import { StyleSwatch } from "./StyleSwatch";
 import { CopyPromptButton } from "./CopyPromptButton";
 
@@ -24,10 +24,12 @@ function sceneBadge(label: string, stars: number | undefined) {
   );
 }
 
-export function PhilosophyCard({ philosophy: p, lang }: { philosophy: Philosophy; lang: Lang }) {
+export function PhilosophyCard({ philosophy: p }: { philosophy: Philosophy }) {
   const tried = HOUSEHOLD_TRIED[p.number] || [];
-  const showCn = lang === "cn" || lang === "both";
-  const showEn = lang === "en" || lang === "both";
+  // Strip CN: studio_or_subtitle often contains Chinese suffixes; keep only latin/ASCII head.
+  const studio = p.studio_or_subtitle
+    ? p.studio_or_subtitle.replace(/[\u3400-\u9FFF\u3000-\u303F\uFF00-\uFFEF]+/g, "").replace(/[-–—·]\s*$/, "").trim()
+    : "";
 
   return (
     <article className="bg-[color:var(--bg-card)] border border-[color:var(--rule)] hover:border-[color:var(--accent-dim)] transition-colors duration-200 flex flex-col">
@@ -40,8 +42,8 @@ export function PhilosophyCard({ philosophy: p, lang }: { philosophy: Philosophy
               {String(p.number).padStart(2, "0")} · {p.school_en.toUpperCase()}
             </div>
             <h3 className="text-xl leading-tight mt-0.5">{p.name_en}</h3>
-            {p.studio_or_subtitle ? (
-              <div className="text-cn text-[13px] text-[color:var(--ink-dim)] mt-0.5">{p.studio_or_subtitle}</div>
+            {studio ? (
+              <div className="text-[13px] text-[color:var(--ink-dim)] mt-0.5">{studio}</div>
             ) : null}
           </div>
           <div className="mono text-[9px] text-[color:var(--accent-dim)] uppercase tracking-wider whitespace-nowrap">
@@ -49,28 +51,16 @@ export function PhilosophyCard({ philosophy: p, lang }: { philosophy: Philosophy
           </div>
         </header>
 
-        <div>
-          {showEn && p.philosophy_en ? (
-            <blockquote className="italic text-[color:var(--ink)] text-[15px] leading-snug" style={{ fontFamily: "var(--serif)" }}>
-              “{p.philosophy_en}”
-            </blockquote>
-          ) : null}
-          {showCn ? (
-            <blockquote className={`text-cn text-[15px] leading-snug text-[color:var(--ink)] ${showEn ? "mt-1 opacity-80" : ""}`}>
-              「{p.philosophy_cn}」
-            </blockquote>
-          ) : null}
-        </div>
+        {p.philosophy_en ? (
+          <blockquote className="italic text-[color:var(--ink)] text-[15px] leading-snug" style={{ fontFamily: "var(--serif)" }}>
+            “{p.philosophy_en}”
+          </blockquote>
+        ) : null}
 
         <ul className="text-[13px] text-[color:var(--ink-dim)] space-y-1">
-          {(showEn ? p.features_en : []).slice(0, 4).map((f, i) => (
+          {p.features_en.slice(0, 4).map((f, i) => (
             <li key={`e${i}`} className="flex gap-2"><span className="text-[color:var(--accent-dim)]">—</span><span>{f}</span></li>
           ))}
-          {!showEn && showCn
-            ? p.features_cn.slice(0, 4).map((f, i) => (
-                <li key={`c${i}`} className="flex gap-2 text-cn"><span className="text-[color:var(--accent-dim)]">—</span><span>{f}</span></li>
-              ))
-            : null}
         </ul>
 
         {p.rep_work ? (
