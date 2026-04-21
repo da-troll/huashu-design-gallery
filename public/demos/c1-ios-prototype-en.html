@@ -1,6 +1,67 @@
 <!doctype html>
 <html lang="en">
 <head>
+<script>(function(){
+  var __muted = true; // start muted; parent unmutes via postMessage
+  var __contexts = [];
+  var __media = [];
+  function apply(el){
+    try { el.muted = __muted; if (__muted) { if (typeof el.volume === 'number') el.volume = 0; } else { el.volume = 1; } } catch(e){}
+  }
+  function applyAll(){
+    __media.forEach(apply);
+    __contexts.forEach(function(ctx){
+      try { if (__muted) ctx.suspend && ctx.suspend(); else ctx.resume && ctx.resume(); } catch(e){}
+    });
+  }
+  ['AudioContext','webkitAudioContext'].forEach(function(k){
+    var Orig = window[k];
+    if (!Orig) return;
+    function Wrapped(opts){
+      var ctx = new Orig(opts);
+      __contexts.push(ctx);
+      if (__muted) { try { ctx.suspend(); } catch(e){} }
+      return ctx;
+    }
+    Wrapped.prototype = Orig.prototype;
+    try { window[k] = Wrapped; } catch(e){}
+  });
+  var OrigCreate = document.createElement.bind(document);
+  document.createElement = function(tag){
+    var el = OrigCreate.apply(document, arguments);
+    if (tag && /^(audio|video)$/i.test(tag)) { __media.push(el); apply(el); }
+    return el;
+  };
+  function scan(root){
+    if (!root || !root.querySelectorAll) return;
+    root.querySelectorAll('audio,video').forEach(function(el){
+      if (__media.indexOf(el) === -1) { __media.push(el); apply(el); }
+    });
+  }
+  function boot(){
+    scan(document);
+    var mo = new MutationObserver(function(muts){
+      muts.forEach(function(m){
+        m.addedNodes.forEach(function(n){
+          if (n.nodeType !== 1) return;
+          if (/^(AUDIO|VIDEO)$/.test(n.tagName)) { __media.push(n); apply(n); }
+          scan(n);
+        });
+      });
+    });
+    mo.observe(document.body || document.documentElement, { childList: true, subtree: true });
+  }
+  if (document.readyState === 'loading') document.addEventListener('DOMContentLoaded', boot);
+  else boot();
+  window.addEventListener('message', function(e){
+    if (!e.data || typeof e.data !== 'object') return;
+    if (e.data.__mute === undefined) return;
+    __muted = !!e.data.__mute;
+    applyAll();
+  });
+  // Announce readiness so parent can send initial state.
+  try { parent.postMessage({ __muteReady: true, href: location.pathname }, '*'); } catch(e){}
+})();</script>
 <meta charset="utf-8" />
 <title>huashu-design V2 · c1-ios-prototype · EN</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
