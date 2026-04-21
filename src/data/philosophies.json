@@ -1,0 +1,682 @@
+[
+  {
+    "number": 1,
+    "name_en": "Pentagram",
+    "studio_or_subtitle": "Michael Bierut风格",
+    "school_key": "information",
+    "school_zh": "信息建筑派",
+    "school_en": "Information Architecture",
+    "philosophy_cn": "字体即语言，网格即思想",
+    "features_cn": [
+      "极度克制的颜色（黑白+1个品牌色）",
+      "瑞士网格系统的现代演绎",
+      "字体排印作为主要视觉语言",
+      "负空间的战略性使用（60%+留白）"
+    ],
+    "prompt_dna": "Pentagram/Michael Bierut style:\n- Extreme typographic hierarchy, Helvetica/Univers family\n- Swiss grid with precise mathematical spacing\n- Black/white + one accent color (#HEX)\n- Information architecture as visual structure\n- 60%+ whitespace ratio\n- Data visualization as primary decoration",
+    "rep_work": "Hillary Clinton 2016 campaign identity",
+    "search_keywords": "pentagram hillary logo system",
+    "scene_scores": {
+      "web": 3,
+      "ppt": 3,
+      "pdf": 2,
+      "infographic": 2,
+      "cover": 3
+    },
+    "ai_generation_score": 1,
+    "best_path": "HTML",
+    "philosophy_en": "Type is language; grid is thought.",
+    "features_en": [
+      "Extreme color restraint (black + white + 1 brand color)",
+      "Modern interpretation of the Swiss grid system",
+      "Typography as the primary visual language",
+      "Strategic use of negative space (60%+ whitespace)"
+    ]
+  },
+  {
+    "number": 2,
+    "name_en": "Stamen Design",
+    "studio_or_subtitle": "数据诗学",
+    "school_key": "information",
+    "school_zh": "信息建筑派",
+    "school_en": "Information Architecture",
+    "philosophy_cn": "让数据成为可触摸的风景",
+    "features_cn": [
+      "地图学思维应用于信息设计",
+      "算法生成的有机图形",
+      "温暖的数据可视化色调（赭石、鼠尾草绿、深蓝）",
+      "可交互的层级系统"
+    ],
+    "prompt_dna": "Stamen Design aesthetic:\n- Cartographic approach to data visualization\n- Organic, algorithm-generated patterns\n- Warm palette (terracotta, sage green, deep blues)\n- Layered information like topographic maps\n- Hand-crafted feel despite digital precision\n- Soft shadows and depth",
+    "rep_work": "COVID-19 surge map",
+    "search_keywords": "stamen covid map visualization",
+    "scene_scores": {
+      "web": 2,
+      "ppt": 2,
+      "pdf": 2,
+      "infographic": 3,
+      "cover": 2
+    },
+    "ai_generation_score": 2,
+    "best_path": "混合",
+    "philosophy_en": "Let data become a touchable landscape.",
+    "features_en": [
+      "Cartographic thinking applied to information design",
+      "Algorithm-generated organic forms",
+      "Warm data palette (terracotta, sage green, deep blues)",
+      "Layered, interactive information hierarchies"
+    ]
+  },
+  {
+    "number": 3,
+    "name_en": "Information Architects",
+    "studio_or_subtitle": "内容优先原则",
+    "school_key": "information",
+    "school_zh": "信息建筑派",
+    "school_en": "Information Architecture",
+    "philosophy_cn": "设计不是装饰，是内容的建筑",
+    "features_cn": [
+      "极端的内容层级清晰度",
+      "只使用系统字体（优化阅读）",
+      "蓝色超链接传统的坚守",
+      "性能即美学"
+    ],
+    "prompt_dna": "Information Architects philosophy:\n- Content-first hierarchy, zero decorative elements\n- System fonts only (SF Pro/Roboto/Inter)\n- Classic blue hyperlinks (#0000EE)\n- Reading-optimized line length (66 characters)\n- Progressive disclosure of depth\n- Text-heavy, fast-loading design",
+    "rep_work": "iA Writer app",
+    "search_keywords": "information architects ia writer",
+    "scene_scores": {
+      "web": 3,
+      "ppt": 1,
+      "pdf": 3,
+      "infographic": 1,
+      "cover": 1
+    },
+    "ai_generation_score": 1,
+    "best_path": "HTML",
+    "philosophy_en": "Design isn't decoration — it's the architecture of content.",
+    "features_en": [
+      "Extreme content-hierarchy clarity",
+      "System fonts only (reading-optimized)",
+      "Strict adherence to the classic blue hyperlink",
+      "Performance is aesthetic"
+    ]
+  },
+  {
+    "number": 4,
+    "name_en": "Fathom Information Design",
+    "studio_or_subtitle": "科学叙事",
+    "school_key": "information",
+    "school_zh": "信息建筑派",
+    "school_en": "Information Architecture",
+    "philosophy_cn": "每一个像素都必须承载信息",
+    "features_cn": [
+      "科学期刊的严谨+设计的优雅",
+      "定量数据的精确可视化",
+      "冷静的专业色调（灰、海军蓝）",
+      "注释与引用系统的设计化"
+    ],
+    "prompt_dna": "Fathom Information Design style:\n- Scientific journal aesthetic meets modern design\n- Precise data visualization (charts, timelines, scatter plots)\n- Neutral scheme (grays, navy, one highlight color)\n- Footnote/citation design integrated into layout\n- Clean sans-serif (GT America/Graphik)\n- Information density without clutter",
+    "rep_work": "Bill & Melinda Gates Foundation年度报告",
+    "search_keywords": "fathom information design gates foundation",
+    "scene_scores": {
+      "web": 2,
+      "ppt": 3,
+      "pdf": 3,
+      "infographic": 3,
+      "cover": 2
+    },
+    "ai_generation_score": 1,
+    "best_path": "HTML",
+    "philosophy_en": "Every pixel must carry information.",
+    "features_en": [
+      "Scientific-journal rigor, design elegance",
+      "Precise quantitative visualization",
+      "Cool, professional palette (grey, navy)",
+      "Annotation + citation systems as design"
+    ]
+  },
+  {
+    "number": 5,
+    "name_en": "Locomotive",
+    "studio_or_subtitle": "滚动叙事大师",
+    "school_key": "motion",
+    "school_zh": "运动诗学派",
+    "school_en": "Motion Poetics",
+    "philosophy_cn": "滚动不是浏览，是旅程",
+    "features_cn": [
+      "丝滑的视差滚动",
+      "电影化的分镜叙事",
+      "大胆的空间留白",
+      "动态元素的精确编排"
+    ],
+    "prompt_dna": "Locomotive scroll narrative style:\n- Film-like scene composition with parallax depth\n- Generous vertical spacing between sections\n- Bold typography emerging from darkness\n- Smooth motion blur effects\n- Dark mode (near-black backgrounds)\n- Strategic glowing accents\n- Hero sections 100vh tall",
+    "rep_work": "Lusion.co website",
+    "search_keywords": "locomotive scroll lusion",
+    "scene_scores": {
+      "web": 3,
+      "ppt": 2,
+      "pdf": 1,
+      "infographic": 1,
+      "cover": 2
+    },
+    "ai_generation_score": 2,
+    "best_path": "混合",
+    "philosophy_en": "Scroll is the new narrative timeline.",
+    "features_en": [
+      "Cinematic scroll-driven storytelling",
+      "Layered parallax with depth cues",
+      "Smooth, inertia-based transitions",
+      "Cursor interaction as performance"
+    ]
+  },
+  {
+    "number": 6,
+    "name_en": "Active Theory",
+    "studio_or_subtitle": "WebGL诗人",
+    "school_key": "motion",
+    "school_zh": "运动诗学派",
+    "school_en": "Motion Poetics",
+    "philosophy_cn": "让技术可见化即让技术可理解",
+    "features_cn": [
+      "3D粒子系统作为核心元素",
+      "实时渲染的数据可视化",
+      "鼠标交互驱动的世界构建",
+      "霓虹与深空的配色"
+    ],
+    "prompt_dna": "Active Theory WebGL aesthetic:\n- Particle systems representing data flow\n- 3D visualization in depth space\n- Neon gradients (cyan/magenta/electric blue) on dark\n- Mouse-reactive environment\n- Depth of field and bokeh effects\n- Floating UI with glassmorphism",
+    "rep_work": "NASA Prospect",
+    "search_keywords": "active theory nasa webgl",
+    "scene_scores": {
+      "web": 3,
+      "ppt": 1,
+      "pdf": 1,
+      "infographic": 1,
+      "cover": 2
+    },
+    "ai_generation_score": 3,
+    "best_path": "AI生成",
+    "philosophy_en": "The browser is a stage for physical play.",
+    "features_en": [
+      "WebGL + Three.js as primary canvas",
+      "Playful, tactile microinteractions",
+      "Bold gradient + fluorescent accents",
+      "Physics-driven motion"
+    ]
+  },
+  {
+    "number": 7,
+    "name_en": "Field.io",
+    "studio_or_subtitle": "算法美学",
+    "school_key": "motion",
+    "school_zh": "运动诗学派",
+    "school_en": "Motion Poetics",
+    "philosophy_cn": "代码即设计师",
+    "features_cn": [
+      "生成艺术系统",
+      "每次访问都不同的动态图形",
+      "抽象几何的智能编排",
+      "技术感与艺术性的平衡"
+    ],
+    "prompt_dna": "Field.io generative design style:\n- Abstract geometric patterns, algorithmically generated\n- Dynamic composition that feels computational\n- Monochromatic base with vibrant accent\n- Mathematical precision in spacing\n- Voronoi diagrams or Delaunay triangulation\n- Clean code aesthetic",
+    "rep_work": "British Council digital installations",
+    "search_keywords": "field.io generative design",
+    "scene_scores": {
+      "web": 2,
+      "ppt": 2,
+      "pdf": 1,
+      "infographic": 2,
+      "cover": 3
+    },
+    "ai_generation_score": 3,
+    "best_path": "AI生成",
+    "philosophy_en": "Generative systems produce the form — we set the rules.",
+    "features_en": [
+      "Rules-based procedural output",
+      "Brand identity as a living system",
+      "Parameter-driven aesthetic variance",
+      "Code-native graphic design"
+    ]
+  },
+  {
+    "number": 8,
+    "name_en": "Resn",
+    "studio_or_subtitle": "叙事驱动的交互",
+    "school_key": "motion",
+    "school_zh": "运动诗学派",
+    "school_en": "Motion Poetics",
+    "philosophy_cn": "每个点击都推进故事",
+    "features_cn": [
+      "游戏化的用户旅程",
+      "强烈的情感化设计",
+      "插画与代码的深度结合",
+      "非线性的探索体验"
+    ],
+    "prompt_dna": "Resn interactive storytelling approach:\n- Illustrative style mixed with UI elements\n- Gamified exploration (progress indicators)\n- Warm color palette despite tech subject\n- Character-driven design\n- Scroll-triggered animations\n- Editorial illustration meets product design",
+    "rep_work": "Resn.co.nz portfolio",
+    "search_keywords": "resn interactive storytelling",
+    "scene_scores": {
+      "web": 3,
+      "ppt": 1,
+      "pdf": 1,
+      "infographic": 1,
+      "cover": 2
+    },
+    "ai_generation_score": 2,
+    "best_path": "AI生成",
+    "philosophy_en": "The web as immersive theatre.",
+    "features_en": [
+      "Full-screen cinematic WebGL scenes",
+      "Dense, surreal 3D choreography",
+      "Ambient audio + motion tight coupling",
+      "Experience over information"
+    ]
+  },
+  {
+    "number": 9,
+    "name_en": "Experimental Jetset",
+    "studio_or_subtitle": "概念极简",
+    "school_key": "minimalism",
+    "school_zh": "极简主义派",
+    "school_en": "Minimalism",
+    "philosophy_cn": "一个想法=一个形式",
+    "features_cn": [
+      "单一视觉隐喻贯穿整个设计",
+      "蓝/红/黄+黑白的蒙德里安色系",
+      "字体即图形",
+      "反商业的诚实设计"
+    ],
+    "prompt_dna": "Experimental Jetset conceptual minimalism:\n- Single visual metaphor for entire design\n- Primary colors only (red/blue/yellow) + black/white\n- Typography as main graphic element\n- Grid-based with deliberate rule-breaking\n- No photography, only type and geometry\n- Anti-commercial, honest aesthetic",
+    "rep_work": "Whitney Museum identity",
+    "search_keywords": "experimental jetset whitney responsive w",
+    "scene_scores": {
+      "web": 2,
+      "ppt": 2,
+      "pdf": 2,
+      "infographic": 2,
+      "cover": 3
+    },
+    "ai_generation_score": 2,
+    "best_path": "混合",
+    "philosophy_en": "Form follows content; nothing else.",
+    "features_en": [
+      "Radical removal of decorative noise",
+      "Bold typographic slabs as hero",
+      "Monochrome or duotone palettes",
+      "Every element justifies its presence"
+    ]
+  },
+  {
+    "number": 10,
+    "name_en": "Müller",
+    "studio_or_subtitle": "Brockmann传承 - 瑞士网格纯粹主义",
+    "school_key": "minimalism",
+    "school_zh": "极简主义派",
+    "school_en": "Minimalism",
+    "philosophy_cn": "客观性即美",
+    "features_cn": [
+      "数学精确的网格系统（8pt基线）",
+      "绝对的左对齐或居中",
+      "单色或双色方案",
+      "功能主义至上"
+    ],
+    "prompt_dna": "Josef Müller-Brockmann Swiss modernism:\n- Mathematical grid system (8pt baseline)\n- Strict alignment (flush left or centered)\n- Two-color maximum (black + one accent)\n- Akzidenz-Grotesk or similar rationalist typeface\n- No decorative elements\n- Timeless, objective aesthetic",
+    "rep_work": "《Grid Systems in Graphic Design》",
+    "search_keywords": "muller brockmann grid systems poster",
+    "scene_scores": {
+      "web": 2,
+      "ppt": 3,
+      "pdf": 3,
+      "infographic": 3,
+      "cover": 2
+    },
+    "ai_generation_score": 1,
+    "best_path": "HTML",
+    "philosophy_en": "The grid is mathematics — obey it.",
+    "features_en": [
+      "Strict Swiss grid with modular proportions",
+      "Sans-serif (Helvetica / Akzidenz-Grotesk) dominance",
+      "Asymmetric balance through grid tension",
+      "Objective, functional clarity"
+    ]
+  },
+  {
+    "number": 11,
+    "name_en": "Build",
+    "studio_or_subtitle": "当代极简品牌",
+    "school_key": "minimalism",
+    "school_zh": "极简主义派",
+    "school_en": "Minimalism",
+    "philosophy_cn": "精致的简单比复杂更难",
+    "features_cn": [
+      "奢侈品级的留白（70%+）",
+      "微妙的字重对比（200-600）",
+      "单一强调色的战略使用",
+      "呼吸感的节奏"
+    ],
+    "prompt_dna": "Build studio luxury minimalism:\n- Generous whitespace (70%+ of area)\n- Subtle typography weight shifts (200 to 600)\n- Single accent color used sparingly\n- High-end product photography aesthetic\n- Soft shadows and subtle gradients\n- Golden ratio proportions",
+    "rep_work": "Build studio portfolio",
+    "search_keywords": "build studio london branding",
+    "scene_scores": {
+      "web": 3,
+      "ppt": 3,
+      "pdf": 2,
+      "infographic": 1,
+      "cover": 3
+    },
+    "ai_generation_score": 1,
+    "best_path": "HTML",
+    "philosophy_en": "Typography is the identity.",
+    "features_en": [
+      "Oversized display type as primary graphic",
+      "Punchy brand-color accents on mono grounds",
+      "Grid + type tension creates rhythm",
+      "Confident, editorial voice"
+    ]
+  },
+  {
+    "number": 12,
+    "name_en": "Sagmeister & Walsh",
+    "studio_or_subtitle": "快乐极简",
+    "school_key": "minimalism",
+    "school_zh": "极简主义派",
+    "school_en": "Minimalism",
+    "philosophy_cn": "美即功能的情感维度",
+    "features_cn": [
+      "意外的色彩爆发",
+      "手工感与数字的融合",
+      "正能量的视觉语言",
+      "实验性但可读"
+    ],
+    "prompt_dna": "Sagmeister & Walsh joyful philosophy:\n- Unexpected color bursts on minimal base\n- Handmade elements (physical objects in digital)\n- Optimistic visual language\n- Experimental typography that remains legible\n- Human warmth through imperfection\n- Mix of analog and digital aesthetics",
+    "rep_work": "The Happy Show",
+    "search_keywords": "sagmeister walsh happy show",
+    "scene_scores": {
+      "web": 2,
+      "ppt": 3,
+      "pdf": 1,
+      "infographic": 2,
+      "cover": 3
+    },
+    "ai_generation_score": 3,
+    "best_path": "AI生成",
+    "philosophy_en": "Style is expression; design is personality.",
+    "features_en": [
+      "Hand-drawn and collage elements",
+      "Emotion-forward color choices",
+      "Personal narrative embedded in craft",
+      "Distinctly individual, distinctly human"
+    ]
+  },
+  {
+    "number": 13,
+    "name_en": "Zach Lieberman",
+    "studio_or_subtitle": "代码诗学",
+    "school_key": "experimental",
+    "school_zh": "实验先锋派",
+    "school_en": "Experimental Avant-garde",
+    "philosophy_cn": "编程即绘画",
+    "features_cn": [
+      "手绘感的算法图形",
+      "实时生成艺术",
+      "黑白的纯粹表达",
+      "工具本身的可见性"
+    ],
+    "prompt_dna": "Zach Lieberman code-as-art style:\n- Hand-drawn aesthetic generated by code\n- Black and white only, no color\n- Real-time generative patterns\n- Sketch-like line quality\n- Visible process/grid/construction lines\n- Poetic interpretation of algorithms",
+    "rep_work": "openFrameworks creative coding",
+    "search_keywords": "zach lieberman openframeworks generative",
+    "scene_scores": {
+      "web": 1,
+      "ppt": 1,
+      "pdf": 1,
+      "infographic": 2,
+      "cover": 3
+    },
+    "ai_generation_score": 3,
+    "best_path": "AI生成",
+    "philosophy_en": "Code is drawing; drawing is thinking.",
+    "features_en": [
+      "Realtime generative visuals",
+      "Poetic algorithmic gestures",
+      "Minimal palette, maximal motion vocabulary",
+      "Tools as expressive medium"
+    ]
+  },
+  {
+    "number": 14,
+    "name_en": "Raven Kwok",
+    "studio_or_subtitle": "参数化美学",
+    "school_key": "experimental",
+    "school_zh": "实验先锋派",
+    "school_en": "Experimental Avant-garde",
+    "philosophy_cn": "系统的美胜过个体的美",
+    "features_cn": [
+      "分形与递归图形",
+      "黑白高对比",
+      "建筑化的信息结构",
+      "东方园林的算法演绎"
+    ],
+    "prompt_dna": "Raven Kwok parametric aesthetic:\n- Fractal patterns and recursive structures\n- High-contrast black and white\n- Architectural visualization of data\n- Chinese garden principles in algorithm form\n- Intricate detail that rewards zooming\n- Processing/Creative coding aesthetic",
+    "rep_work": "Raven Kwok generative art exhibitions",
+    "search_keywords": "raven kwok processing generative art",
+    "scene_scores": {
+      "web": 1,
+      "ppt": 2,
+      "pdf": 1,
+      "infographic": 2,
+      "cover": 3
+    },
+    "ai_generation_score": 3,
+    "best_path": "AI生成",
+    "philosophy_en": "Loops are the grammar of motion.",
+    "features_en": [
+      "Endless looping generative animations",
+      "Mathematical pattern exploration",
+      "Precise temporal rhythm",
+      "Textural, granular surfaces"
+    ]
+  },
+  {
+    "number": 15,
+    "name_en": "Ash Thorp",
+    "studio_or_subtitle": "赛博诗意",
+    "school_key": "experimental",
+    "school_zh": "实验先锋派",
+    "school_en": "Experimental Avant-garde",
+    "philosophy_cn": "未来不是冰冷的，是孤独的诗",
+    "features_cn": [
+      "电影级的光影",
+      "赛博朋克的温暖版本（橙/青，非冷蓝）",
+      "故事性的概念设计",
+      "工业美学的精致化"
+    ],
+    "prompt_dna": "Ash Thorp cinematic concept art:\n- Film-grade lighting and atmospheric effects\n- Warm cyberpunk (orange/teal, NOT cold blue)\n- Industrial design meets luxury\n- Narrative concept art feel\n- Volumetric lighting and god rays\n- Blade Runner warmth over Tron coldness",
+    "rep_work": "Ghost in the Shell concept art",
+    "search_keywords": "ash thorp ghost shell concept art",
+    "scene_scores": {
+      "web": 2,
+      "ppt": 2,
+      "pdf": 1,
+      "infographic": 1,
+      "cover": 3
+    },
+    "ai_generation_score": 3,
+    "best_path": "AI生成",
+    "philosophy_en": "Darkness reveals structure.",
+    "features_en": [
+      "Dark, volumetric compositions",
+      "Cinematic sci-fi palettes (deep blue, rust)",
+      "Complex 3D geometry as narrative",
+      "Atmospheric depth over flat clarity"
+    ]
+  },
+  {
+    "number": 16,
+    "name_en": "Territory Studio",
+    "studio_or_subtitle": "屏幕界面虚构",
+    "school_key": "experimental",
+    "school_zh": "实验先锋派",
+    "school_en": "Experimental Avant-garde",
+    "philosophy_cn": "未来UI的今日想象",
+    "features_cn": [
+      "科幻电影中的屏幕设计（FUI）",
+      "全息投影感",
+      "多层叠加的数据可视化",
+      "可信的未来感"
+    ],
+    "prompt_dna": "Territory Studio FUI (Fantasy User Interface):\n- Fantasy User Interface design\n- Holographic projection aesthetics\n- Orange/amber monochrome or cyan accents\n- Multiple overlapping data layers\n- Believable future technology\n- Technical readouts and data streams",
+    "rep_work": "Blade Runner 2049 screen graphics",
+    "search_keywords": "territory studio blade runner interface",
+    "scene_scores": {
+      "web": 2,
+      "ppt": 2,
+      "pdf": 1,
+      "infographic": 2,
+      "cover": 3
+    },
+    "ai_generation_score": 3,
+    "best_path": "AI生成",
+    "philosophy_en": "Design the fiction; ship the future.",
+    "features_en": [
+      "Speculative interface aesthetics",
+      "Motion-graphics polish for UI",
+      "HUD vocabulary (data-dense overlays)",
+      "High-fidelity future-artifact realism"
+    ]
+  },
+  {
+    "number": 17,
+    "name_en": "Takram",
+    "studio_or_subtitle": "日式思辨设计",
+    "school_key": "eastern",
+    "school_zh": "东方哲学派",
+    "school_en": "Eastern Philosophy",
+    "philosophy_cn": "技术是思考的媒介",
+    "features_cn": [
+      "概念原型的优雅",
+      "柔和的科技感（圆角、柔和阴影）",
+      "图表即艺术",
+      "谦逊的精致"
+    ],
+    "prompt_dna": "Takram Japanese speculative design:\n- Elegant concept prototypes and diagrams\n- Soft tech aesthetic (rounded corners, gentle shadows)\n- Charts and diagrams as art pieces\n- Modest sophistication\n- Neutral natural colors (beige, soft gray, muted green)\n- Design as philosophical inquiry",
+    "rep_work": "NHK Fabricated City",
+    "search_keywords": "takram nhk data visualization",
+    "scene_scores": {
+      "web": 3,
+      "ppt": 3,
+      "pdf": 3,
+      "infographic": 2,
+      "cover": 2
+    },
+    "ai_generation_score": 1,
+    "best_path": "HTML",
+    "philosophy_en": "Design thinking as cross-disciplinary inquiry.",
+    "features_en": [
+      "Research-driven narrative design",
+      "Restrained, institutional palettes",
+      "Thoughtful typography with quiet authority",
+      "Data + story tightly interwoven"
+    ]
+  },
+  {
+    "number": 18,
+    "name_en": "Kenya Hara",
+    "studio_or_subtitle": "空的设计",
+    "school_key": "eastern",
+    "school_zh": "东方哲学派",
+    "school_en": "Eastern Philosophy",
+    "philosophy_cn": "设计不是填充，是清空",
+    "features_cn": [
+      "极致的留白（80%+）",
+      "纸张质感的数字化",
+      "白色的层次（暖白、冷白、米白）",
+      "触觉的视觉化"
+    ],
+    "prompt_dna": "Kenya Hara \"emptiness\" design:\n- Extreme whitespace (80%+)\n- Paper texture and tactility in digital form\n- Layers of white (warm white, cool white, off-white)\n- Minimal color (if any, very desaturated)\n- Design by subtraction not addition\n- Zen simplicity",
+    "rep_work": "Muji art direction, 《Designing Design》",
+    "search_keywords": "kenya hara designing design muji",
+    "scene_scores": {
+      "web": 2,
+      "ppt": 3,
+      "pdf": 3,
+      "infographic": 1,
+      "cover": 3
+    },
+    "ai_generation_score": 1,
+    "best_path": "HTML",
+    "philosophy_en": "Emptiness is the vessel for meaning.",
+    "features_en": [
+      "Extreme whitespace as primary element",
+      "Pure, off-white grounds with subtle warmth",
+      "Minimal type, maximal breath",
+      "Serenity as visual stance"
+    ]
+  },
+  {
+    "number": 19,
+    "name_en": "Irma Boom",
+    "studio_or_subtitle": "书籍建筑师",
+    "school_key": "eastern",
+    "school_zh": "东方哲学派",
+    "school_en": "Eastern Philosophy",
+    "philosophy_cn": "信息的物理诗学",
+    "features_cn": [
+      "非线性的信息架构",
+      "边缘与边界的游戏",
+      "意外的颜色组合（粉+红、橙+棕）",
+      "手工艺的数字转译"
+    ],
+    "prompt_dna": "Irma Boom book architecture style:\n- Non-linear information structure\n- Play with edges, margins, boundaries\n- Unexpected color combos (pink+red, orange+brown)\n- Handcraft translated to digital\n- Dense information inviting exploration\n- Editorial design, unconventional grid",
+    "rep_work": "SHV Think Book (2136 pages)",
+    "search_keywords": "irma boom shv think book",
+    "scene_scores": {
+      "web": 1,
+      "ppt": 2,
+      "pdf": 3,
+      "infographic": 2,
+      "cover": 3
+    },
+    "ai_generation_score": 2,
+    "best_path": "混合",
+    "philosophy_en": "The book is the design; the design is the book.",
+    "features_en": [
+      "Print-native craft in every detail",
+      "Textural paper + edge + format play",
+      "Editorial rhythm over visual punch",
+      "Archive-quality, lasting artifacts"
+    ]
+  },
+  {
+    "number": 20,
+    "name_en": "Neo Shen",
+    "studio_or_subtitle": "东方光影诗",
+    "school_key": "eastern",
+    "school_zh": "东方哲学派",
+    "school_en": "Eastern Philosophy",
+    "philosophy_cn": "技术需要人的温度",
+    "features_cn": [
+      "水墨晕染的数字化",
+      "柔和的光晕效果",
+      "诗意的留白",
+      "情感化的色彩（深蓝、暖灰、柔金）"
+    ],
+    "prompt_dna": "Neo Shen poetic Chinese aesthetic:\n- Digital interpretation of ink wash painting\n- Soft glow and light diffusion effects\n- Poetic negative space\n- Emotional palette (deep blues, warm grays, soft gold)\n- Calligraphic influences in typography\n- Atmospheric depth",
+    "rep_work": "Neo Shen digital art series",
+    "search_keywords": "neo shen digital ink wash art",
+    "scene_scores": {
+      "web": 2,
+      "ppt": 2,
+      "pdf": 2,
+      "infographic": 2,
+      "cover": 3
+    },
+    "ai_generation_score": 3,
+    "best_path": "AI生成",
+    "philosophy_en": "Eastern restraint meets contemporary rigor.",
+    "features_en": [
+      "Asian typographic harmony (CJK + Latin)",
+      "Warm ink-tone palettes",
+      "Meditative layout cadence",
+      "Modern-traditional tension in every mark"
+    ]
+  }
+]

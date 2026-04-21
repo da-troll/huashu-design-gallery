@@ -1,0 +1,20 @@
+{
+  "project_name": "Huashu Design Gallery",
+  "description": "Browsable gallery of the 20 design philosophies from alchaincyf/huashu-design. Bilingual captions (CN + EN), copy-to-Claude-Code prompt DNA, and live iframes of the 9 capability demos shipped in the source skill.",
+  "tech_stack": ["React 19", "TypeScript", "Vite 8", "Tailwind CSS v4"],
+  "build_date": "2026-04-21",
+  "build_time_hours": 2,
+  "status": "complete",
+  "features": [
+    "20 philosophy cards grouped into 5 schools (Information Architecture, Motion Poetics, Minimalism, Experimental Avant-garde, Eastern Philosophy)",
+    "Each card: bilingual CN/EN tagline + features, custom CSS style swatch, scene-fit scores (web/ppt/pdf/infographic/cover), best execution path (HTML / AI / Hybrid)",
+    "One-click 'copy prompt DNA' button — pastes a Claude Code-ready style prompt into the clipboard",
+    "Filter bar: language toggle (CN/EN/Both), best-for-scene, execution path",
+    "Live iframes of the 9 capability demos from the source repo (iOS prototype, slides-to-PPTX, motion design, tweaks, infographic, expert review, brand protocol, junior designer, fallback advisor)",
+    "Household 'tried by' tag strip per philosophy (seeded empty, extensible)",
+    "Build-time parser extracts structured data from the upstream design-styles.md — a schema change upstream means a re-run of 'npm run prebuild', not a rewrite"
+  ],
+  "live_url": "https://mvp.trollefsen.com/2026-04-21-huashu-design-gallery/",
+  "github_url": "https://github.com/da-troll/huashu-design-gallery",
+  "inspired_by": "alchaincyf/huashu-design"
+}
