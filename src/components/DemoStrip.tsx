@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useCallback, useEffect, useRef, useState } from "react";
 
 const DEMOS = [
   { file: "c1-ios-prototype-en.html", title: "iOS Prototype", sub: "Capability · hi-fi clickable prototype", hasAudio: true },
@@ -14,6 +14,83 @@ const DEMOS = [
 
 export function DemoStrip() {
   const [muted, setMuted] = useState<Set<string>>(new Set());
+  const iframeRefs = useRef<Record<string, HTMLIFrameElement | null>>({});
+  const observers = useRef<Record<string, MutationObserver | null>>({});
+
+  const applyMute = useCallback((file: string, shouldMute: boolean) => {
+    const ifr = iframeRefs.current[file];
+    if (!ifr) return;
+    try {
+      const doc = ifr.contentDocument;
+      const win = ifr.contentWindow as (Window & { __muteContexts?: AudioContext[] }) | null;
+      if (doc) {
+        doc.querySelectorAll<HTMLMediaElement>("audio, video").forEach((el) => {
+          el.muted = shouldMute;
+          if (shouldMute) el.volume = 0;
+        });
+      }
+      win?.__muteContexts?.forEach((ctx) => {
+        if (shouldMute) ctx.suspend?.();
+        else ctx.resume?.();
+      });
+    } catch {
+      /* cross-origin / detached — ignore */
+    }
+  }, []);
+
+  const handleLoad = (file: string) => (e: React.SyntheticEvent<HTMLIFrameElement>) => {
+    const ifr = e.currentTarget;
+    try {
+      const win = ifr.contentWindow as (Window & {
+        __muteHooked?: boolean;
+        __muteContexts?: AudioContext[];
+        AudioContext?: typeof AudioContext;
+        webkitAudioContext?: typeof AudioContext;
+      }) | null;
+      const doc = ifr.contentDocument;
+      if (win && !win.__muteHooked) {
+        win.__muteHooked = true;
+        win.__muteContexts = [];
+        const Orig = win.AudioContext || win.webkitAudioContext;
+        if (Orig) {
+          const Wrapped = function (this: unknown, ...args: ConstructorParameters<typeof AudioContext>) {
+            const ctx = new Orig(...args);
+            win.__muteContexts!.push(ctx);
+            if (muted.has(file)) ctx.suspend?.();
+            return ctx;
+          } as unknown as typeof AudioContext;
+          Wrapped.prototype = Orig.prototype;
+          win.AudioContext = Wrapped;
+          win.webkitAudioContext = Wrapped;
+        }
+      }
+      if (doc) {
+        observers.current[file]?.disconnect();
+        const obs = new MutationObserver(() => {
+          if (muted.has(file)) applyMute(file, true);
+        });
+        obs.observe(doc, { childList: true, subtree: true });
+        observers.current[file] = obs;
+      }
+    } catch {
+      /* ignore */
+    }
+    applyMute(file, muted.has(file));
+  };
+
+  useEffect(() => {
+    muted.forEach((f) => applyMute(f, true));
+    Object.keys(iframeRefs.current).forEach((f) => {
+      if (!muted.has(f)) applyMute(f, false);
+    });
+  }, [muted, applyMute]);
+
+  useEffect(() => {
+    const obs = observers.current;
+    return () => {
+      Object.values(obs).forEach((o) => o?.disconnect());
+    };
+  }, []);
 
   const toggleMute = (file: string) =>
     setMuted((s) => {
@@ -42,9 +119,11 @@ export function DemoStrip() {
             <article key={d.file} className="border border-[color:var(--rule)] bg-[color:var(--bg-card)] flex flex-col">
               <div className="aspect-[16/10] bg-white overflow-hidden relative">
                 <iframe
-                  src={isMuted ? "about:blank" : `./demos/${d.file}`}
+                  ref={(el) => { iframeRefs.current[d.file] = el; }}
+                  src={`./demos/${d.file}`}
                   title={d.title}
                   loading="lazy"
+                  onLoad={handleLoad(d.file)}
                   className="w-full h-full border-0"
                   sandbox="allow-scripts allow-same-origin"
                 />
