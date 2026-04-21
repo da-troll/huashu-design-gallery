@@ -6,6 +6,29 @@ import { CopyPromptButton } from "./CopyPromptButton";
 // easy to populate later as agents actually use each one.
 const HOUSEHOLD_TRIED: Record<number, string[]> = {};
 
+const SUBTITLE_EN: Record<number, string> = {
+  1: "Michael Bierut style",
+  2: "Data poetics",
+  3: "Content-first",
+  4: "Scientific storytelling",
+  5: "Masters of scroll narrative",
+  6: "WebGL poets",
+  7: "Algorithmic aesthetics",
+  8: "Narrative-driven interaction",
+  9: "Conceptual minimalism",
+  10: "Brockmann lineage · Swiss grid purism",
+  11: "Contemporary minimal brand",
+  12: "Joyful minimalism",
+  13: "Code as poetry",
+  14: "Parametric aesthetics",
+  15: "Cyber-poetic",
+  16: "Screen-interface fiction",
+  17: "Japanese speculative design",
+  18: "Design of emptiness",
+  19: "Book architect",
+  20: "Eastern light-and-shadow poetry",
+};
+
 const AGENT_META: Record<string, { emoji: string; name: string }> = {
   wilson: { emoji: "🏐", name: "Wilson" },
   eve: { emoji: "🌱", name: "Eve" },
@@ -26,10 +49,7 @@ function sceneBadge(label: string, stars: number | undefined) {
 
 export function PhilosophyCard({ philosophy: p }: { philosophy: Philosophy }) {
   const tried = HOUSEHOLD_TRIED[p.number] || [];
-  // Strip CN: studio_or_subtitle often contains Chinese suffixes; keep only latin/ASCII head.
-  const studio = p.studio_or_subtitle
-    ? p.studio_or_subtitle.replace(/[\u3400-\u9FFF\u3000-\u303F\uFF00-\uFFEF]+/g, "").replace(/[-–—·]\s*$/, "").trim()
-    : "";
+  const studio = SUBTITLE_EN[p.number] || "";
 
   return (
     <article className="bg-[color:var(--bg-card)] border border-[color:var(--rule)] hover:border-[color:var(--accent-dim)] transition-colors duration-200 flex flex-col">
